@@ -13,6 +13,11 @@ Made by `ResourceReaderRepositoryPopulator` of `Spring Data Mongo`
 http://docs.spring.io/spring-data/data-mongo/docs/current/reference/html/#core.repository-populators
 
 == Usage
+Add `MongoDataTestExecutionListener` to your test class
+....
+@TestExecutionListeners(listeners = MongoDataTestExecutionListener.class, mergeMode = MergeMode.MERGE_WITH_DEFAULTS)
+....
+Annotate your test class or test method
 ....
 @Test
 @MongoData("/test-data/foo.json")
