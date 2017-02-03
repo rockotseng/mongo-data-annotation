@@ -1,0 +1,24 @@
+= Mongo Data Annotation
+
+To annotate a test class or test method to configure testing data to be
+inserted into certain MongoDB during integration tests.
+
+Idea from `@Sql` of `Spring Framework`
+
+https://docs.spring.io/spring/docs/current/spring-framework-reference/html/integration-testing.html#__sql
+
+
+Made by `ResourceReaderRepositoryPopulator` of `Spring Data Mongo`
+
+http://docs.spring.io/spring-data/data-mongo/docs/current/reference/html/#core.repository-populators
+
+== Usage
+....
+@Test
+@MongoData("/test-data/foo.json")
+public void test() {
+    assertEquals(1, fooRepository.count());
+}
+....
+
+Please see `IntegrationTest.java` for details.

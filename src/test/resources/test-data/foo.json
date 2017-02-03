@@ -1,0 +1,6 @@
+[
+	{
+		"_class": "com.rocko.test.IntegrationTest.Foo",
+		"bar": "Hello World"
+	}
+]
